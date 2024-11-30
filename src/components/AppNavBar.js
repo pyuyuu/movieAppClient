@@ -21,7 +21,7 @@ export default function AppNavBar() {
                         
                         {user && (
                             <>
-                                <Nav.Link as={Link} to="/movies">Workouts</Nav.Link>
+                                <Nav.Link as={Link} to="/movies">Movies</Nav.Link>
                                 <Nav.Link as={Link} to="/logout">Logout</Nav.Link>
                             </>
                         )}

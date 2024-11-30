@@ -7,6 +7,7 @@ import { Container } from 'react-bootstrap';
 import AppNavBar from './components/AppNavBar';
 import Home from './pages/Home';
 import Register from './pages/Register';
+import Login from './pages/Login';
 import './App.css';
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </Container>
         <Toaster position="bottom-right" reverseOrder={false} toastOptions={{
