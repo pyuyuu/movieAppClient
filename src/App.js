@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'r
 import { Toaster, toast } from 'react-hot-toast';
 import { Container } from 'react-bootstrap';
 import Home from './pages/Home';
+import Register from './pages/Register';
 import './App.css';
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Container>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </Container>
         <Toaster position="bottom-right" reverseOrder={false} toastOptions={{
