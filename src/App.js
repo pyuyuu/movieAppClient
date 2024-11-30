@@ -4,6 +4,7 @@ import { jwtDecode } from 'jwt-decode';
 import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import { Toaster, toast } from 'react-hot-toast';
 import { Container } from 'react-bootstrap';
+import AppNavBar from './components/AppNavBar';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import './App.css';
@@ -39,6 +40,7 @@ function App() {
   return (
     <UserProvider value={{ user, setUser, unsetUser }}>
       <Router>
+        <AppNavBar />
         <Container>
           <Routes>
             <Route path="/" element={<Home />} />
