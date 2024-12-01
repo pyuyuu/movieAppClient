@@ -15,7 +15,6 @@ export default function Movies() {
     });
     const [newComment, setNewComment] = useState('');
     const [movieId, setMovieId] = useState(null);
-    const [selectedMovieId, setSelectedMovieId] = useState(null);
     const [filteredMovies, setFilteredMovies] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [showCommentModal, setShowCommentModal] = useState(false);
@@ -164,25 +163,8 @@ export default function Movies() {
         }
     };
 
-    const handleSearch = (e) => {
-        const searchValue = e.target.value.toLowerCase();
-        const filtered = movies.filter((movie) =>
-            movie._id.toLowerCase().includes(searchValue)
-        );
-        setFilteredMovies(filtered);
-    };
-
     return (
         <Container>
-            <Row className="mb-4">
-                <InputGroup>
-                    <FormControl
-                        placeholder="Search by Movie ID"
-                        onChange={handleSearch}
-                    />
-                </InputGroup>
-            </Row>
-
             <Row className="mb-4 d-flex gap-2">
                 {user?.token && (
                     <>
